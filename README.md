@@ -1,5 +1,8 @@
 # data-structures-and-algorithms-401
 
-## 1. array-reverse :
 
-[array-reverse](./array-reverse/README.md)
+| Number | Subject                                                |
+| ------ | ------------------------------------------------------ |
+| 1      | [Array Reverse](./array-reverse/README.md)             |
+| 2      | [Array Insert Shift](./array-insert-shift/README.md)   |
+| 3      | [Array Binary Search](./array-binary-search/README.md) |
