@@ -132,5 +132,50 @@ class AppTest {
         String resultString = "{ 6 } -> { 7 } -> { 8 } -> { 10 } -> NULL";
         assertEquals( resultString , testList.toString() );
     }
+ @Test void kGreaterThanLength () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.append(9);
+        testList.append(10);
+        assertEquals( "Exception" , testList.kthFromEnd(70) );
+    }
+
+    @Test void kSameLength () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.append(9);
+        testList.append(10);
+        assertEquals( "{6}" , testList.kthFromEnd(4) );
+    }
+
+    @Test void kNegative () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.append(9);
+        testList.append(10);
+        assertEquals( "Exception" , testList.kthFromEnd(-5) );
+    }
+
+    @Test void listSize1 () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        assertEquals( "{6}" , testList.kthFromEnd(0) );
+        assertEquals( "Exception" , testList.kthFromEnd(5) );
+    }
+    @Test void happyPath () {
+        LinkedList testList = new LinkedList();
+        testList.append(6);
+        testList.append(7);
+        testList.append(8);
+        testList.append(9);
+        testList.append(10);
+        assertEquals( "{8}" , testList.kthFromEnd(2) );
+    }
 
 }
