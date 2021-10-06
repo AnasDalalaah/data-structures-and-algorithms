@@ -17,6 +17,7 @@ public class App {
 
         myList.insertAfter(4,10);
         myList.insertBefore(1,10);
+        System.out.println(myList.kthFromEnd(2));
 
         Node current = myList.head;
         while (current != null) {
