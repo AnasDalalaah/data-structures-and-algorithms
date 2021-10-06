@@ -11,25 +11,16 @@ public class App {
         myList.append(1);
         myList.append(2);
         myList.append(3);
-        myList.append(4);
-        myList.append(5);
-        myList.append(6);
+         LinkedList myList2 = new LinkedList();
+        myList2.append(7);
+        myList2.append(8);
+        myList2.append(9);
+        myList2.append(10);
+        myList2.append(11);
+        myList2.append(12);
+       LinkedList newZippedList = new LinkedList();
+        newZippedList.head = myList.zipLists(myList,myList2);
+        System.out.println(newZippedList);
 
-        myList.insertAfter(4,10);
-        myList.insertBefore(1,10);
-        System.out.println(myList.kthFromEnd(2));
-
-        Node current = myList.head;
-        while (current != null) {
-            System.out.println(current.value);
-            current = current.next;
-        }
-
-        System.out.println(myList.includes(8));
-        System.out.println(myList.includes(3));
-        System.out.println(myList.includes(5));
-        System.out.println(myList.includes(10));
-
-        System.out.println(myList.toString());
     }
 }
