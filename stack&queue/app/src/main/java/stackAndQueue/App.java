@@ -9,44 +9,41 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(new App().getGreeting());
-        System.out.println("===================");
+        
+      System.out.println(new App().getGreeting());
 
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack stack = new Stack();
 
-        stack.push(5);
-        stack.push(12);
-        stack.push(29);
+        stack.push("A");
+        stack.push("N");
+        stack.push("A");
+        stack.push("S");   
+
+        
+Queue queue= new Queue();
+        queue.enqueue("A");
+        queue.enqueue("N");
+        queue.enqueue("A");
+        queue.enqueue("S");
+
+        System.out.println(queue);
+
+        System.out.println(queue.dequeue());
+
+        System.out.println(queue.peek());
+
+         PseudoQueue queue1 = new PseudoQueue();
+
+        queue1.enqueue("20");
+        queue1.enqueue("1");
+        queue1.enqueue("2");
+        queue1.enqueue("3");
+        queue1.enqueue("4");
 
 
+        System.out.println(queue1.dequeue());
 
-        stack.pop();
-        stack.pop();
-        stack.peek();
-        stack.isEmpty();
-        System.out.println("Top value : " + stack.top.value);
-
-
-
-
-        /*
-        ====================================================================
-        */
-
-
-
-        Queue<Integer> queue = new Queue<Integer>();
-        Queue<Integer> queue1 = new Queue<Integer>();
-
-        queue.enqueue(5);
-        queue.enqueue(12);
-        queue.enqueue(27);
-        queue.enqueue(50);
-
-        queue.dequeue();
-
-        queue1.isEmpty();
-        queue.isEmpty();
+        
 
     }
 }
