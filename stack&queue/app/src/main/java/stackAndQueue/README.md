@@ -64,6 +64,6 @@ and O(1) in the case that stack2 was not empty by popping immediately.
 <!-- Show how to run your code, and examples of it in action -->
 It described in the Summary,
 so to run it you need to Enqueue(value) or Dequeue.
-![challenge11StackQueuePseudo](AnasDalalaah/data-structures-and-algorithms/stack&queue/app/src/main/java/stackAndQueue/challenge11StackQueuePseudo.jpg)
+![challenge11StackQueuePseudo](AnasDalalaah/data-structures-and-algorithms/stack&queue/app/src/main/java/stack&queue/challenge11StackQueuePseudo.jpg)
 
 ----
