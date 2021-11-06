@@ -1,13 +1,12 @@
 
 package stack&queue;
 
-import org.junit.Test;
-import java.io.IOException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AppTest {
-    @Test public void appHasAGreeting() {
+   /* @Test public void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
@@ -148,5 +147,40 @@ public class AppTest {
     public void enqueueDequeueEdgeCaseTest() {
         PseudoQueue queueTest = new PseudoQueue();
         assertEquals("queue is empty",queueTest.dequeue());
-    }
+    }*/
+
+    //  *********************** code challenge 12 ********************
+   @Test
+    public void enqueueAnimalShelterTest(){
+
+        AnimalShelter shelterTest = new AnimalShelter();
+
+        shelterTest.enqueue(new Cat("Bella"));
+        shelterTest.enqueue(new Cat("Leo"));
+        assertEquals("AnimalShelter { catQueue = Queue { Bella --> Leo --> Null }, dogQueue = Queue { Null } }",shelterTest.toString());
+        assertEquals("Bella", shelterTest.catQueue.peek().toString());
+
+        shelterTest.enqueue(new Dog("BUDDY"));
+        shelterTest.enqueue(new Dog("MILO"));
+        assertEquals("AnimalShelter { catQueue = Queue { Bella --> Leo --> Null }, dogQueue = Queue { BUDDY --> MILO --> Null } }",shelterTest.toString());
+        assertEquals("BUDDY", shelterTest.dogQueue.peek().toString());
+
+        assertFalse(shelterTest.catQueue.isEmpty());
+        assertFalse(shelterTest.dogQueue.isEmpty());
+
+        shelterTest.dequeue("cat");
+        assertEquals("AnimalShelter { catQueue = Queue { Leo --> Null }, dogQueue = Queue { BUDDY --> MILO --> Null } }",shelterTest.toString());
+
+        shelterTest.dequeue("dog");
+        assertEquals("AnimalShelter { catQueue = Queue { Leo --> Null }, dogQueue = Queue { MILO --> Null } }",shelterTest.toString());
+
+        shelterTest.dequeue("cat");
+        shelterTest.dequeue("dog");
+        assertEquals("AnimalShelter { catQueue = Queue { Null }, dogQueue = Queue { Null } }",shelterTest.toString());
+        assertTrue(shelterTest.catQueue.isEmpty());
+        assertTrue(shelterTest.dogQueue.isEmpty());
+
+        assertNull(shelterTest.dequeue("cat"));
+        assertNull(shelterTest.dequeue("dog"));
+
 }

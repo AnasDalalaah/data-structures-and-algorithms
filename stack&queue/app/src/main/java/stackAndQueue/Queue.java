@@ -1,48 +1,61 @@
 package stack&queue;
 
 public class Queue<T> {
-    Node<T> front = null;
-    Node<T> rear = null;
-
+    Node<T> front;
+    Node<T> rear;
+ public Queue(){
+        this.front = this.rear = null;
+    }
     public void enqueue(T value){
         Node<T> newNode = new Node<T>(value);
-        rear = front;
-        if(front == null) {
-            front = newNode;
-            rear = front;
+        if(this.rear == null) {
+            this.front = this.rear = newNode;
+        }
+
+        this.rear.next = newNode;
+        this.rear = newNode;
+       
+    }
+
+    public T dequeue(){
+        if(this.front == null){
+        System.out.println("no Value to dequue, the queue is empty");
+            return null;
+
+        } 
+        else {
+           Node temp = this.front;
+            this.front = this.front.next;
+            return (T) temp.getData();
+        }
+
+    }
+
+    public T peek()  {
+        if(front == null){
+            throw new IllegalArgumentExceptio("This is empty");
         }
         else{
-            rear.next = newNode;
-            rear = newNode;
+            return front.getData();
         }
-
-    }
-
-    public T dequeue() throws Exception {
-        if(front == null){
-            throw new Exception("This queue is empty");
-        } else {
-            front = front.next;
-        }
-
-        System.out.println("The removed value : " + front.value);
-        return front.value;
-    }
-
-    public T peek() throws Exception {
-        if(front == null){
-            throw new Exception("This queue is empty");
-        }
-        return front.value;
     }
 
     public boolean isEmpty() {
         if (front==null){
-            System.out.println(true);
             return true;
         } else
-            System.out.println(false);
         return false;
     }
+     @Override
+    public String toString() {
+        String queueValue = "Queue { ";
+        Node trav = front;
+        while (trav != null){
+            queueValue += trav.getData() + " --> ";
+            trav = trav.next;
+        }
+        queueValue += "Null }";
+        return queueValue;
+    }  
 }
 

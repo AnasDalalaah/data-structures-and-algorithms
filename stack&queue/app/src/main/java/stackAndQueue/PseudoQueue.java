@@ -1,7 +1,7 @@
 package stack.and.queue;
 
 
-
+/*
 public class PseudoQueue implements QueueInterFace{
 
 
@@ -34,3 +34,4 @@ public class PseudoQueue implements QueueInterFace{
         }
     }
 }
+*/

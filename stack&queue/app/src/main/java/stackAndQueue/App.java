@@ -32,7 +32,7 @@ Queue queue= new Queue();
 
         System.out.println(queue.peek());
 
-         PseudoQueue queue1 = new PseudoQueue();
+        /* PseudoQueue queue1 = new PseudoQueue();
 
         queue1.enqueue("20");
         queue1.enqueue("1");
@@ -41,9 +41,30 @@ Queue queue= new Queue();
         queue1.enqueue("4");
 
 
-        System.out.println(queue1.dequeue());
+        System.out.println(queue1.dequeue());*/
 
-        
+      
+        //============================== Code challenge 12 =================================
+
+        AnimalShelter shelter = new AnimalShelter();
+
+        shelter.enqueue(new Cat("Bella"));
+        shelter.enqueue(new Cat("Lucy"));
+        shelter.enqueue(new Cat("Leo"));
+
+
+        shelter.enqueue(new Dog("MILO"));
+        shelter.enqueue(new Dog("AXEL"));
+        shelter.enqueue(new Dog("BUDDY"));
+
+        System.out.println(shelter);
+        System.out.println(shelter.catQueue.peek().toString());
+
+        shelter.dequeue("cat");
+        System.out.println(shelter);
+
+        shelter.dequeue("dog");
+        System.out.println(shelter);  
 
     }
 }
