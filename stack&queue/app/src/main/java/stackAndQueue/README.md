@@ -64,6 +64,34 @@ and O(1) in the case that stack2 was not empty by popping immediately.
 <!-- Show how to run your code, and examples of it in action -->
 It described in the Summary,
 so to run it you need to Enqueue(value) or Dequeue.
-![challenge11StackQueuePseudo](stack&queue/app/src/main/java/stackAndQueue/challenge11StackQueuePseudo.jpg)
+![challenge11StackQueuePseudo](challenge11StackQueuePseudo.jpg)
 
 ----
+# 12. Stack Queue Animal Shelter
+
+## Challenge Summary
+<!-- Description of the challenge -->
+1. **Dog & Cat classes** Implements Animal Interface.
+2. **AnimalShelter Class** holds only dogs and cats.
+3. The shelter operates using Queue.
+2. The 2Methods Inside AnimalShelter Class :
+   1. enqueue
+   - Arguments: animal, and **animal** can be either a dog or a cat object
+   2. dequeue
+   - Arguments: pref, and pref can be either "dog" or "cat".
+   - Return: either a dog or a cat, based on preference.
+   - If pref is not "dog" or "cat" then return null.
+
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+1. Enqueue is O(1), by enqueue to Dog or Cat immediately.
+2. Dequeue is O(1), by dequeue Dog or Cat immediately or return null.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+To run it you need to Enqueue(value) or Dequeue.
+
+
+![stackQueueAnimalShelter](stackQueueAnimalShelter.png)
+![stackQueueAnimalShelterVisual](stackQueueAnimalShelterVisual.png)
