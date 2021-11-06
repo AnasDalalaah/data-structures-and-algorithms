@@ -1,8 +1,19 @@
-package trees;
+package tree;
 
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> implements Comparable<BinarySearchTree<T>> {
 
     private boolean validator;
+    
+    public int FindMax(){
+        List<Integer> myList = (List<Integer>) this.preorderTraversal();
+        int max = Integer.MIN_VALUE;
+        for (Integer integer : myList) {
+            if (integer > max) {
+                max = integer;
+            }
+        }
+        return max;
+    }
 
     public void Add(T data){
         if(isEmpty()){
