@@ -184,3 +184,28 @@ public class AppTest {
         assertNull(shelterTest.dequeue("dog"));
 
 }
+
+    //  *********************** code challenge 13 ********************
+
+
+    @Test
+    public void validateBracketsTest(){
+
+        ValidateBrackets test = new ValidateBrackets();
+
+        assertTrue(test.validateBrackets("{}"));
+        assertTrue(test.validateBrackets("{}(){}"));
+        assertTrue(test.validateBrackets("()[[Extra Characters]]"));
+        assertTrue(test.validateBrackets("(){}[[]]"));
+        assertTrue(test.validateBrackets("{}{Code}[Fellows](())"));
+
+        assertFalse(test.validateBrackets("[({}]"));
+        assertFalse(test.validateBrackets("(]("));
+        assertFalse(test.validateBrackets("{(})"));
+        assertFalse(test.validateBrackets(")"));
+        assertFalse(test.validateBrackets("[}"));
+        assertFalse(test.validateBrackets("["));
+
+    }
+
+}

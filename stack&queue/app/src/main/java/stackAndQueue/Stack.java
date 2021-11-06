@@ -4,7 +4,7 @@ public class Stack<T> {
 
     Node<T> top;
 
-    public void push(String value){
+    public void push(int  value){
        
             Node<T> newNode = new Node(value);
          if (top == null){
@@ -17,6 +17,7 @@ public class Stack<T> {
     }
 
     public int pop(){
+
     int popped=0;
 
     if(top == null){
@@ -49,6 +50,7 @@ public class Stack<T> {
     public String toString() {
         String stackValue = "Stack { ";
         Node trav = top;
+
         while (trav != null){
             stackValue += trav.getData() + " --> ";
             trav=trav.next;
