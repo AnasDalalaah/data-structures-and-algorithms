@@ -44,3 +44,29 @@ Returns: boolean indicating whether or not the value is in the tree at least onc
 - [Contains method algorithm](https://www.baeldung.com/cs/binary-search-trees)
 
 ---
+
+---
+# 16. Tree Max
+
+
+# Challenge Summary
+<!-- Description of the challenge -->
+We asked to write a method that finds the maximum numeric value stored in the binary tree. 
+- Method: **findMaximumValue()**
+- Arguments: none
+- Returns: number
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![treeMax](treeMax.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+O(n) because it checks the value for each node.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initilize A tree variable from **BinaryTree Class**.
+- then call the **findMaximumValue()** method.
+
+---
