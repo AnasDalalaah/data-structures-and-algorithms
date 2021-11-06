@@ -1,4 +1,4 @@
-package stack.and.queue;
+package stack&queue;
 
 public class Animal {
     private String animalName;

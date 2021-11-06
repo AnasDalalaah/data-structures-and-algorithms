@@ -66,5 +66,13 @@ Queue queue= new Queue();
         shelter.dequeue("dog");
         System.out.println(shelter);  
 
+    
+
+     //  *********************** code challenge 12 ********************
+        ValidateBrackets a = new ValidateBrackets();
+
+        System.out.println(a.validateBrackets(")"));
+        System.out.println(a.validateBrackets("{}{{}}"));
+
     }
 }
