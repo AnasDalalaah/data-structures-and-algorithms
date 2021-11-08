@@ -20,6 +20,15 @@ public class App {
         binarySearchTree.Add(11);
         binarySearchTree.Add(4);
         binarySearchTree.Add(9);
+        
+        BinarySearchTree<Integer> breadthTree = new BinarySearchTree();
+
+        breadthTree.Add(20);
+        breadthTree.Add(70);
+        breadthTree.Add(40);
+        breadthTree.Add(60);
+        breadthTree.Add(50);
+
 
         System.out.println(binarySearchTree.FindMax());
 
