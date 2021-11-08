@@ -118,5 +118,44 @@ class AppTest {
 
         assertEquals("[1, 2, 3, 4, 8, 10, 41]","[1, 2, 3, 4, 8, 10, 41]","" + binarySearchTree.breadthFirst(binarySearchTree));
     }
+     // ********************************** Code Challenge 18 ******************************************
+
+    @Test
+    public void kTreeFizzBuzzTest(){
+
+        KTree kTree = new KTree(2);
+
+        kTree.add(1);
+        kTree.add(2);
+        assertEquals("K-ary tree (K=2): {\n" +
+                " root={ value = 1 Children: [\n" +
+                " child: { value = 2 Children: []]\n" +
+                "nodes=2}",kTree.fizzBuzzTree(kTree).toString() );
+
+        kTree.add(3);
+        assertEquals("K-ary tree (K=2): {\n" +
+                " root={ value = 1 Children: [\n" +
+                " child: { value = 2 Children: []\n" +
+                " child: { value = Fizz Children: []]\n" +
+                "nodes=3}", kTree.fizzBuzzTree(kTree).toString());
+
+        kTree.add(5);
+        assertEquals("K-ary tree (K=2): {\n" +
+                " root={ value = 1 Children: [\n" +
+                " child: { value = 2 Children: [\n" +
+                " child: { value = Buzz Children: []]\n" +
+                " child: { value = Fizz Children: []]\n" +
+                "nodes=4}", kTree.fizzBuzzTree(kTree).toString());
+
+        kTree.add(15);
+        assertEquals("K-ary tree (K=2): {\n" +
+                " root={ value = 1 Children: [\n" +
+                " child: { value = 2 Children: [\n" +
+                " child: { value = Buzz Children: []\n" +
+                " child: { value = FizzBuzz Children: []]\n" +
+                " child: { value = Fizz Children: []]\n" +
+                "nodes=5}", kTree.fizzBuzzTree(kTree).toString());
+
+    }
 
 }

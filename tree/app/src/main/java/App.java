@@ -45,5 +45,20 @@ public class App {
 
         System.out.println(binarySearchTree.Contains(5));
 
+        // ********************************** Code Challenge 18 ******************************************
+
+        KTree kTree = new KTree(1);
+
+        kTree.add(1);
+        kTree.add(5);
+        kTree.add(20);
+        kTree.add(21);
+        kTree.add(6);
+        kTree.add(15);
+
+        System.out.println(kTree);
+        System.out.println(kTree.fizzBuzzTree(kTree));
+
+
     }
 }

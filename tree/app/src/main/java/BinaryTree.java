@@ -10,6 +10,12 @@ public class BinaryTree<T>{
     public BinaryTree() {
 
     }
+    
+
+    List<Integer> postOrderList = new ArrayList<>();
+    List<Integer> inOrderList = new ArrayList<>();
+    List<Integer> preOrderList = new ArrayList<>();
+
 
     public List<T> preorderTraversal(){
         if(isEmpty()){
@@ -38,12 +44,10 @@ public class BinaryTree<T>{
         return list;
     }
 
-    //===========================
+    //*************/
 
 
-    public void traversePreOrder(BinaryNode<T> root, List<T> list){ //  root -> left -> right
-        // visit / print the root of the tree (root could be a sub-tree)
-//        System.out.print(root.getData() + " -> ");
+    public void traversePreOrder(BinaryNode<T> root, List<T> list){ 
         list.add(root.getData());
 
         if (root.getLeftNode() != null){ // traverse left
