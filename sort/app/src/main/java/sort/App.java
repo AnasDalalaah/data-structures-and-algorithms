@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
 
-//        <<< COde Challenge 26 >>>
+//        <<< Code Challenge 26 >>>
 
         int[] arr = {8, 4, 23, 42, 16, 15};
 
@@ -19,5 +19,13 @@ public class App {
         insertionSort.insertionSort(arr);
 
         System.out.println(Arrays.toString(arr));
+
+ //        <<< Code Challenge 27 >>>
+
+        int [] mergeArr = {8, 4, 23, 42, 16, 15};
+        MergeSort mergeSort = new MergeSort();
+
+        mergeSort.mergeSort(mergeArr);
+        System.out.println("Merge Array " + Arrays.toString(mergeArr));
     }
 }
