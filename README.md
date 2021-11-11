@@ -11,4 +11,7 @@
 | 6      | [tree](./tree/README.md)|
 | 7      |[Insertion Sort](sort/app/src/main/java/sort/insertion/BLOG.md)|
 | 8      |[Merge Sort](sort/app/src/main/java/sort/merge/BLOG.md)|
+| 9      |[Quick Sort](sort/app/src/main/java/sort/quick/BLOG.md)|
+
+
 
