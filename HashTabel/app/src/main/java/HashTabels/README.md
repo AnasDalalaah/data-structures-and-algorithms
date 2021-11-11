@@ -1,4 +1,6 @@
 # HashTable
+
+## Code Challenge 30:
 A hash table is a data structure that implements a hash table array, which maps keys to values. 
 
 ## Challenge
@@ -36,4 +38,25 @@ returns deleted value.
 
 
     
+----
+
+## Hashmap Repeated Word:
+
+## Challenge Summary
+
+Write a function called repeated word that finds the first word to occur more than once in a string.
+
+## Whiteboard Process
+
+![hashmapRepeatedWord](hashmapRepeatedWord.png)
+
+## Approach & Efficiency
+
+lopp:
+
+Time Approach : O(N)
+
+Space : O(N)
+
+
 ----
