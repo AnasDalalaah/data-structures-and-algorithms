@@ -94,7 +94,7 @@ Write a function called **leftJoin** that left joins two hashmaps into a single 
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![hashmapLeftJoin](HashTabel/app/src/main/java/HashTabels/hashmapLeftJoin.png)
+![hashmapLeftJoin](hashmapLeftJoin.png)
   
 ## Approach & Efficiency
 
