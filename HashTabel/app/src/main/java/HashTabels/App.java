@@ -21,7 +21,7 @@ public class App {
         System.out.println(clubs.contains("ss"));
         System.out.println(clubs.contains("Real Madrid"));
 
-        //        *****Code Challenge 31 *****
+        //        ***** Code Challenge 31 *****
 
         String paragraph1 = "Once upon a time, there was a brave princess who...";
 
@@ -31,7 +31,7 @@ public class App {
         
         System.out.println(clubs.repeatedWord(paragraph3));
 
-        //  *****Code Challenge 32 *****
+        //  ***** Code Challenge 32 *****
 
         HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
 
@@ -64,7 +64,42 @@ public class App {
 
         System.out.println(trees.treeIntersection(tree1,tree2));
 
+        //     ***** Code Challenge 33 *****
+
+        HashMap<String, String> firstHashMap = new HashMap<>();
+        HashMap<String, String> secondHashMap = new HashMap<>();
+
+        firstHashMap.put("fond", "enamored");
+        firstHashMap.put("wrath", "anger");
+        firstHashMap.put("diligent", "employed");
+        firstHashMap.put("outfit", "garb");
+        firstHashMap.put("guide", "usher");
+
+        secondHashMap.put("fond", "averse");
+        secondHashMap.put("wrath", "delight");
+        secondHashMap.put("diligent", "idle");
+        secondHashMap.put("guide", "follow");
+        secondHashMap.put("flow", "jam");
+
+        System.out.println(leftJoin(firstHashMap, secondHashMap));
 
 
-    }   
+    }
+
+    // ***** Code Challenge 33 *****
+
+    public static List<String> leftJoin(HashMap h1, HashMap h2){
+
+        List<String> list = new ArrayList<>();
+        for(Object k : h1.keySet()){
+            if(h1.containsKey(k)){
+                list.add(k +  ": " +"[ " + h1.get(k)+ ", " + h2.get(k) +" ]");
+            } else{
+                list.add(k + ": " + h1.get(k) + ", " + null);
+            }
+        }
+
+        return list;
+    }
+  
 }

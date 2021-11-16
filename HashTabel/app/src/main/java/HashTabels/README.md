@@ -82,3 +82,43 @@ Find all values found to be in 2 binary trees
 **Space Approach** : O(N) - create hash map and arrayList.
 
 ----
+
+#  Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+## Challenge Summary
+<!-- Description of the challenge -->
+Write a function called **leftJoin** that left joins two hashmaps into a single data structure.
+
+**Arguments:** Two hash maps
+**Return:** List 
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![hashmapLeftJoin](HashTabel/app/src/main/java/HashTabels/hashmapLeftJoin.png)
+  
+## Approach & Efficiency
+
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### - Approach:
+#### **Fisrt method Algorithm :**
+
+1. Declare a function called leftJoin that takes two hashmaps and returns arrayList.
+2. Initialize arraylist.
+3. loop inside the list of hashmap1.
+- add to the arraylist the key of that index, the hashmap1, and the hashmap2 value of that key.
+4. return that arraylist.
+
+  
+### - Efficiency:
+- **Space complexity** -> O(n)
+
+- **Time complexity** -> O(n), where n is number of hashmap1 keys.
+
+  
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+- Initialize A variable from **LeftJoin Class**.
+- then call the **leftjoin(hashmap1, hashmap2)** method.
+
+
+---
