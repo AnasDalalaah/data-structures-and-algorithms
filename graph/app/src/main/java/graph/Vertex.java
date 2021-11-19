@@ -20,7 +20,8 @@ public class Vertex {
     @Override
     public String toString() {
         return "Vertex{" +
-                "label='" + data + '\'' +
+                "label='" + data + '\''+ ',' +
+                " weight=" + weight +
                 '}';
     }
 
