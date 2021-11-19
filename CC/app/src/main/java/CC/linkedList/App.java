@@ -15,7 +15,7 @@ public class App {
         System.out.println(new App().getGreeting());
 
 
-        LinkedList<String> List1 = new LinkedList<String>();
+       /* LinkedList<String> List1 = new LinkedList<String>();
         LinkedList<Integer> List2 = new LinkedList<>();
 
         List1.insert("a");
@@ -28,7 +28,7 @@ public class App {
         List2.insert(2);
         List2.insert(4);
 
-
+*/
 
 //        List1.delete("dd");
 //        System.out.println(List1);
@@ -37,8 +37,8 @@ public class App {
 //        System.out.println(List2);
 
         //================================================================================
-        List2.deleteNode(2, List2);
-        System.out.println(List2);
+       // List2.deleteNode(2, List2);
+       // System.out.println(List2);
 
         //==============================================================================
 //        System.out.println(List1.listReverser(List1));
@@ -70,7 +70,33 @@ public class App {
 //       System.out.println(List1);
 
         //=====================================Tree==================================================
-        BinaryTree<String> Bt1= new BinaryTree<>();
+       BinaryTree<Integer> binaryTree= new BinaryTree<>();
+        BST<Integer> bst1= new BST<>();
+
+        binaryTree.setRoot(new BinaryNode<>(1));
+        binaryTree.getRoot().setLeftNode(new BinaryNode(2));
+        binaryTree.getRoot().getLeftNode().setLeftNode(new BinaryNode(4));
+        binaryTree.getRoot().getLeftNode().setRightNode(new BinaryNode(5));
+        binaryTree.getRoot().getLeftNode().getRightNode().setLeftNode(new BinaryNode(6));
+        binaryTree.getRoot().getLeftNode().getRightNode().setRightNode(new BinaryNode(7));
+        binaryTree.getRoot().setRightNode(new BinaryNode(3));
+        binaryTree.getRoot().getRightNode().setRightNode(new BinaryNode(8));
+
+        bst1.add(5);
+        bst1.add(3);
+        bst1.add(6);
+        bst1.add(9);
+        bst1.add(4);
+        bst1.add(1);
+        bst1.add(8);
+
+        System.out.println(bst1);
+
+        System.out.println(bst1.contain(8));
+
+        System.out.println(bst1.findMax());
+
+        System.out.println(binaryTree.findMaxvalue());
 
 
     }
