@@ -98,80 +98,66 @@ class AppTest {
         graph1.addEdge("Narnia", "Naboo");
 
         assertEquals("[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]", graph1.breadthTraverse("Pandora").toString());
+
+        
+        
     }
 
 
-    //   **** Code Challenge 37 ****
+   //   **** Code Challenge 38 ****
 
     @Test
-    public void businessTripTest(){
+    public void depthFirstTest(){
 
-        Graph graph2 = new Graph();
+        Graph graph3 = new Graph();
 
-        graph2.addVertex("Pandora");
-        graph2.addVertex("Arendelle");
-        graph2.addVertex("Metroville");
-        graph2.addVertex("Monstroplolis");
+        graph3.addVertex("A");
+        graph3.addVertex("B");
+        graph3.addVertex("C");
+        graph3.addVertex("D");
+        graph3.addVertex("E");
+        graph3.addVertex("F");
+        graph3.addVertex("G");
+        graph3.addVertex("H");
 
-        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
-        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
-        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
+        graph3.addEdge("A", "D");
+        graph3.addEdge("A", "B");
+        graph3.addEdge("B", "D");
+        graph3.addEdge("B", "C");
+        graph3.addEdge("C", "G");
+        graph3.addEdge("D", "F");
+        graph3.addEdge("D", "H");
+        graph3.addEdge("D", "E");
+        graph3.addEdge("F", "H");
 
-        List<String> cities1 = new ArrayList<>();
-        cities1.add("Pandora");
-        cities1.add("Arendelle");
-        assertEquals(150, graph2.businessTrip(graph2, cities1));
-
-        List<String> cities2 = new ArrayList<>();
-        cities2.add("Pandora");
-        cities2.add("Arendelle");
-        cities2.add("Monstroplolis");
-        assertEquals(192, graph2.businessTrip(graph2, cities2));
-
-    }
-
-    @Test
-    public void businessTripNoEdge(){
-
-        Graph graph2 = new Graph();
-
-        graph2.addVertex("Pandora");
-        graph2.addVertex("Arendelle");
-        graph2.addVertex("Metroville");
-        graph2.addVertex("Monstroplolis");
-
-        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
-        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
-        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
-
-        List<String> cities1 = new ArrayList<>();
-        cities1.add("Pandora");
-        cities1.add("Monstroplolis");
-        assertEquals(0, graph2.businessTrip(graph2, cities1));
+        assertEquals("[A, B, C, G, D, E, H, F]", graph3.depthFirstTraverse("A").toString());
     }
 
     @Test
-    public void businessTripAtLeastOnoEdge(){
+    public void depthFirstOneVertex(){
 
-        Graph graph2 = new Graph();
+        Graph graph3 = new Graph();
 
-        graph2.addVertex("Pandora");
-        graph2.addVertex("Arendelle");
-        graph2.addVertex("Metroville");
-        graph2.addVertex("Monstroplolis");
-        graph2.addVertex("Naboo");
+        graph3.addVertex("A");
 
-        graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
-        graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
-        graph2.addEdgeWithWeight("Arendelle", "Monstroplolis",42);
-        graph2.addEdgeWithWeight("Naboo", "Monstroplolis",42);
-
-
-        List<String> cities1 = new ArrayList<>();
-        cities1.add("Pandora");
-        cities1.add("Naboo");
-        cities1.add("Monstroplolis");
-        assertEquals(42, graph2.businessTrip(graph2, cities1));
+        assertEquals("[A]", graph3.depthFirstTraverse("A").toString());
     }
+
+    //    THIS TEST FOR THREE VERTICES AND ONE OF THEM DID NOT CONNECT WITH THE OTHER TWO VERTICES
+
+    @Test
+    public void depthFirstTest2(){
+
+        Graph graph3 = new Graph();
+
+        graph3.addVertex("A");
+        graph3.addVertex("B");
+        graph3.addVertex("C");
+
+        graph3.addEdge("A", "B");
+
+        assertEquals("[A, B]", graph3.depthFirstTraverse("A").toString());
+    }
+
 
 }
